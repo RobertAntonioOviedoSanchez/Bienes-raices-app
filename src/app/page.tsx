@@ -9,7 +9,7 @@ import { Services } from '@/components/Services'
 import { TransitionPage } from '@/components/TransitionPage'
 import dynamic from "next/dynamic"
 
-const LocationMap = dynamic(
+const LocationMap = dynamic( // Importar el mapa de esta manera para evitar fallas al momento de carga
   () => import('../components/Location').then(module => module.Location),
   {
     ssr: false
